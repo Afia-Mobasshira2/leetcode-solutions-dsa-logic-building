@@ -2,14 +2,13 @@ def largestAltitude(gain):
     current_altitude = 0
     max_altitude = 0
     
-    # Write a loop to go through each tracking number in the 'gain' list
     for g in gain:
-        # 1. Update your current_altitude by adding 'g' to it
+        # 1. Update your current_altitude (Right-to-Left assignment)
+        current_altitude = current_altitude + g
         
-        # 2. Check if the new current_altitude is greater than max_altitude.
-        #    If it is, update max_altitude!
-        
-        pass # Delete this 'pass' when you write your code
+        # 2. If the new altitude is higher than our maximum, update the maximum!
+        if current_altitude > max_altitude:
+            max_altitude = current_altitude
         
     return max_altitude
 
